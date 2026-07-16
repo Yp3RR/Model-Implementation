@@ -6,4 +6,4 @@ Implementing core ML algorithms from scratch using numpy to understand the math 
 - Linear Regression
 - Logistic Regression
 - Decision Trees
-- 
+- Random Forest
