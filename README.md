@@ -4,4 +4,5 @@ Implementing core ML algorithms from scratch using numpy to understand the math 
 
 ## ML models implemented:
 - Linear Regression
+- Logistic Regression
 - 
