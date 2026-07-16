@@ -1,3 +1,3 @@
 # ML model Implementations from scratch
 
-Implementing core ML algorithms from scratch using numpy
+Implementing core ML algorithms from scratch using numpy to understand the math 
