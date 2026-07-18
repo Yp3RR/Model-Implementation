@@ -9,4 +9,4 @@ Implementing core ML algorithms from scratch using numpy to understand the math 
 - Random Forest
 - XGBoost
 
-Main purpose of this
+Main purpose of this repo
