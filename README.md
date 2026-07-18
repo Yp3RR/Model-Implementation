@@ -8,4 +8,5 @@ Implementing core ML algorithms from scratch using numpy to understand the math 
 - Decision Trees
 - Random Forest
 - XGBoost
-- 
+
+Main purpose
