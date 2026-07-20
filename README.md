@@ -16,3 +16,5 @@ Main purpose of this repo is understanding the reasoning and functioning of the 
 One section per algorithm
 
 ## Key concepts covered
+
+info
