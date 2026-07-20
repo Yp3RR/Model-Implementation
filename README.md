@@ -17,4 +17,4 @@ One section per algorithm
 
 ## Key concepts covered
 
-information
+information gain,
