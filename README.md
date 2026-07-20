@@ -13,4 +13,4 @@ Main purpose of this repo is understanding the reasoning and functioning of the 
 
  ## Structure
 
-One section per
+One section per algorithm
