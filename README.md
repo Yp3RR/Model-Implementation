@@ -17,4 +17,4 @@ One section per algorithm
 
 ## Key concepts covered
 
-information gain, bootstrapping, gradient descent
+information gain, bootstrapping, gradient descent, etc.
