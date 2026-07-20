@@ -10,4 +10,5 @@ Implementing core ML algorithms from scratch using numpy to understand the math 
 - XGBoost
 
 Main purpose of this repo is understanding the reasoning and functioning of the models. Instead of simply calling .fit() must know the why behind it.
+
  ##
