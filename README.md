@@ -19,6 +19,6 @@ One section per algorithm
 
 information gain, bootstrapping, gradient descent, etc.
 
-## How to run
+## How to runn
 
 
