@@ -21,5 +21,5 @@ information gain, bootstrapping, gradient descent, etc.
 
 ## How to run
 
-Simply copy paste the code and run it in
+Simply copy paste the code and run it in terminal
 
