@@ -21,4 +21,5 @@ information gain, bootstrapping, gradient descent, etc.
 
 ## How to run
 
+Simply 
 
