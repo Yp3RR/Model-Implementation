@@ -18,7 +18,7 @@ One section per algorithm
 ## Key concepts covered
 
 information gain, bootstrapping, gradient descent, etc.
-further detailed explaination for code snippets provided below 
+further detailed explaination for code snippets provided below respective
 
 ## How to run
 
