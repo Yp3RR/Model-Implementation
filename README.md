@@ -13,7 +13,8 @@ Main purpose of this repo is understanding the reasoning and functioning of the 
 
  ## Structure
 
-One section per algorithm
+- One section per algorithm
+- Model
 
 ## Key concepts covered
 
