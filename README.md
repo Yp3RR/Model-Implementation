@@ -14,7 +14,7 @@ Main purpose of this repo is understanding the reasoning and functioning of the 
  ## Structure
 
 - One section per algorithm
-- standalone code with system
+- standalone code with system execution
 
 ## Key concepts covered
 
