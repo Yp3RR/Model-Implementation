@@ -24,5 +24,5 @@ Main purpose of this repo is understanding the reasoning and functioning of the 
 ## How to run
 
 Simply copy paste the code and run it in terminal
-- few models
+- few models left to update
 
