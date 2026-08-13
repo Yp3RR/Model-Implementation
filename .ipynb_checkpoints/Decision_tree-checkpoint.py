@@ -32,7 +32,7 @@ class DecisionTreeFromScratch:
 
     def _entropy(self, y):
         if len(y) == 0:
-            return 0.
+            return 0
         counts = np.bincount(y.astype(int))
         probabilities = counts / len(y)
         return -np.sum([p * np.log2(p) for p in probabilities if p > 0])
@@ -43,7 +43,7 @@ class DecisionTreeFromScratch:
         left_idxs = np.argwhere(X_column <= split_thresh).flatten()
         right_idxs = np.argwhere(X_column > split_thresh).flatten()
         return left_idxs, right_idxs
-    
+
     # argwhere converts the boolean values after the split into actual row indices giving a 2d matrix which is converted
     # to 1-d or simple array using .flatten
 
@@ -112,15 +112,12 @@ class DecisionTreeFromScratch:
 
         return Node(left = left_child,right = right_child,threshold = best_thresh,feature = best_feat)
 
-    # depth defined in build tree which updates with the recursive loop, 1st section is the termination condition, makes
+    # depth defind in build tree which updates with the recursive loop, 1st section is the termination condition, makes 
     # sense, like limiting depth, min split samples and n_labels = 1 meaning pure value node that is leaf
     # if number of features to consider (N_FEATURES) is given, then we do the random choice, else we select all
     # if we do not get best feat since maybe there is no IG, can happen when we are selecting limited features, then we may
     # get this, there we again use most common label
-    # then we split into left right, and run the recursive loop to build tree under left and right child.
-    # added len(y)==0 safety net because we may encounter case where all values go into one side leaving other empty,
-    # and when other child is called into build tree, it receives empty array and this cant be processed by bincount argmax
-    # since cant get max for empty seq. so this safety net
+    # then we split into left right, and runn the recursive loop to build tree under left and right child.
 
     def fit(self,X,y):
         
@@ -139,17 +136,14 @@ class DecisionTreeFromScratch:
             return self._traverse_tree(x,node.left)
         return self._traverse_tree(x,node.right)
 
-    # here we are traversing through the tree made by fit, and using those values to predict, by checking for each X
+    # here we are traversing therough the tree made by fit, and using thosee values to predict, by checking for each X
     # and basically fit has all the information for each node's best splits and we put x, start from root node, and keep 
     # checking till we get single value for it using best splits for each node.
-    # each x is the value of each row/sample, and hence by doing x[node.feature] we get the best feature and then value
-    # inside that feature for that particular row. picking best feature according to node rule, and taking that value from 
-    # the sample we compare it with found best threshold. makes sense now.
+    # 
 
     def predict(self,X):
         X = np.asarray(X, dtype=float)
         return np.array([self._traverse_tree(x,self.root) for x in X])
-    # since we start from root node, we input self.root
 
 if __name__ == "__main__":
     X_train = np.array([[1.0, 1.5], [0.5, 0.8], [2.2, 1.9], [7.0, 8.5], [9.1, 7.8], [8.2, 9.0]], dtype=float)

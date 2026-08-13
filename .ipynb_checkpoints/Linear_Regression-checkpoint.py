@@ -26,7 +26,7 @@ class LinearRegressionFromScratch:
  
             if epoch % 100 == 0:
                 loss = np.mean(error ** 2)
-                print(f"Epoch {epoch:4d} | MSE: {loss}")
+                print(f"Epoch {epoch:4d} | MSE: {loss:.4f}")
 
     def predict(self, X):
 
