@@ -1,33 +1,47 @@
 import numpy as np
-from sklearn.model_selection import train_test_split, GridSearchCV
-from sklearn.preprocessing import StandardScaler
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.pipeline import Pipeline
-from sklearn.metrics import classification_report, confusion_matrix
 
-np.random.seed(42)
-X = np.random.rand(200, 4) * np.array([1.0, 1000.0, 50.0, 0.1]) 
-y = np.random.choice([0, 1], size=200, p=[0.6, 0.4])
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
+class ScratchKNN:
 
-knn_pipeline = Pipeline([
-    ('scaler', StandardScaler()),
-    ('knn', KNeighborsClassifier())
-])
+    def __init__(self, k=3):
+        self.k = k
 
-param_grid = {
-    'knn__n_neighbors': [3, 5, 7, 11, 15],
-    'knn__weights': ['uniform', 'distance'],
-    'knn__metric': ['euclidean', 'manhattan']
-}
+    def fit(self, X, y):
+        # Training is simply storing the dataset in memory
+        self.X_train = np.array(X)
+        self.y_train = np.array(y)
 
-grid_search = GridSearchCV(knn_pipeline, param_grid, cv=5, scoring='accuracy', n_jobs=-1)
-grid_search.fit(X_train, y_train)
+    def predict(self, X_new):
+        X_new = np.array(X_new)
+        predictions = []
 
-best_model = grid_search.best_estimator_
-predictions = best_model.predict(X_test)
+        for point in X_new:
+            # 1. Calculate Euclidean distance: sqrt(sum((x1 - x2)^2))
+            distances = np.sqrt(np.sum((self.X_train - point) ** 2, axis=1))
 
-print(f"Best Model Configurations: {grid_search.best_params_}")
-print("\n--- Model Performance Evaluation ---")
-print(classification_report(y_test, predictions))
+            # 2. Get indices of the K smallest distances
+            k_indices = np.argsort(distances)[:self.k]
+
+            # 3. Retrieve their labels and pick the majority vote
+            k_labels = self.y_train[k_indices]
+            most_common = np.bincount(k_labels).argmax()
+            predictions.append(most_common)
+
+        return np.array(predictions)
+
+
+if __name__ == "__main__":
+    print("🚀 EXECUTING SCRATCH KNN")
+
+    # 2D features: low coordinates vs high coordinates
+    X_train = [[1, 2], [2, 3], [3, 1], [6, 5], [7, 7], [8, 6]]
+    y_train = [0, 0, 0, 1, 1, 1]
+
+    knn = ScratchKNN(k=3)
+    knn.fit(X_train, y_train)
+
+    X_test = [[2, 2], [7, 6]]
+    predictions = knn.predict(X_test)
+
+    print(f"Test Input:   {X_test}")
+    print(f"Predictions:  {predictions} (Expected: [0, 1])")
