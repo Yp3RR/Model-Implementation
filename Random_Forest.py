@@ -82,7 +82,7 @@ class DecisionTree:
         best_feat,best_thresh = self._best_split(X,y,feat_idxs)
 
         if best_feat is None:
-            most_common_label = np.bincount(y,astype(int)).argmax()
+            most_common_label = np.bincount(y. astype(int)).argmax()
             return Node(value=most_common_label)
 
         left_idxs,right_idxs = self._create_split(X[:,best_feat],best_thresh)
