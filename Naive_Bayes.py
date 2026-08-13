@@ -1,36 +1,61 @@
-  import numpy as np
-from sklearn.model_selection import train_test_split, GridSearchCV
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.pipeline import Pipeline
-from sklearn.metrics import classification_report
+import numpy as np
 
-corpus = [
-    "Win a free rolex watch now click here", "Click here to claim your cash prize",
-    "Urgent account verification required", "Hey are we still meeting for coffee later",
-    "Please review the attached project documentation", "Let's grab lunch tomorrow afternoon"
-]
-labels = [1, 1, 1, 0, 0, 0] 
 
-X_train, X_test, y_train, y_test = train_test_split(corpus, labels, test_size=0.3, random_state=42)
+class ScratchNaiveBayes:
+    """
+    Naive Bayes Classifier for binary feature vectors.
+    Includes Laplace Smoothing (+1/+2) and Log-Sum computation.
+    """
 
-# Text processing (TF-IDF) and Classifier packaged together to isolate validation folds
-nb_pipeline = Pipeline([
-    ('tfidf', TfidfVectorizer(stop_words='english', lowercase=True)),
-    ('nb', MultinomialNB())
-])
+    def fit(self, X, y):
+        X, y = np.array(X), np.array(y)
+        self.classes = np.unique(y)
 
-param_grid = {
-    'tfidf__ngram_range': [(1, 1), (1, 2)], # Look at single words and word pairs
-    'nb__alpha': [0.1, 0.5, 1.0, 2.0]        # (alpha)
-}
+        # Calculate Class Priors: P(C)
+        self.priors = {c: np.mean(y == c) for c in self.classes}
 
-grid_search = GridSearchCV(nb_pipeline, param_grid, cv=2, scoring='f1', n_jobs=-1)
-grid_search.fit(X_train, y_train)
+        # Calculate Likelihoods: P(X_i | C) with Laplace Smoothing
+        self.likelihoods = {}
+        for c in self.classes:
+            X_c = X[y == c]
+            # (Feature Counts + 1) / (Total Class Rows + 2)
+            self.likelihoods[c] = (np.sum(X_c, axis=0) + 1) / (X_c.shape[0] + 2)
 
-best_model = grid_search.best_estimator_
-predictions = best_model.predict(X_test)
+    def predict(self, X_new):
+        X_new = np.array(X_new)
+        predictions = []
 
-print(f"Best Hyperparameters: {grid_search.best_params_}")
-print("\n--- Production Performance ---")
-print(classification_report(y_test, predictions, target_names=['Ham', 'Spam']))
+        for point in X_new:
+            class_scores = {}
+            for c in self.classes:
+                # Log-Sum Trick to prevent underflow
+                log_prior = np.log(self.priors[c])
+
+                # Retrieve probability array based on feature presence (1 or 0)
+                probs = np.where(point == 1, self.likelihoods[c], 1 - self.likelihoods[c])
+                log_likelihood = np.sum(np.log(probs))
+
+                class_scores[c] = log_prior + log_likelihood
+
+            # Argmax: Select class with maximum log posterior
+            best_class = max(class_scores, key=class_scores.get)
+            predictions.append(best_class)
+
+        return np.array(predictions)
+
+
+if __name__ == "__main__":
+    print("🚀 EXECUTING SCRATCH NAIVE BAYES")
+
+    # Binary features: e.g., contains ["Offer", "Free", "Meeting"]
+    X_train = [[1, 1, 0], [1, 0, 0], [1, 1, 1], [0, 0, 1], [0, 0, 1], [0, 1, 1]]
+    y_train = [1, 1, 1, 0, 0, 0]  # 1 = Spam, 0 = Normal
+
+    nb = ScratchNaiveBayes()
+    nb.fit(X_train, y_train)
+
+    X_test = [[1, 1, 0], [0, 0, 1]]
+    predictions = nb.predict(X_test)
+
+    print(f"Test Input:   {X_test}")
+    print(f"Predictions:  {predictions} (Expected: [1, 0])")
