@@ -29,4 +29,3 @@ Simply copy paste the code and run it in terminal
 =======
 # Model-Implementation
 Implementation of primary models from scratch, how they are derived, the math behind it and the logic for its code. 
->>>>>>> 51ed9d2 (necessary changes in all the files)
