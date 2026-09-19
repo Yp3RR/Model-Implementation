@@ -26,6 +26,5 @@ Main purpose of this repo is understanding the reasoning and functioning of the 
 Simply copy paste the code and run it in terminal
 - few models left to update which are knn, naive-bayes
 
-=======
 # Model-Implementation
 Implementation of primary models from scratch, how they are derived, the math behind it and the logic for its code. 
