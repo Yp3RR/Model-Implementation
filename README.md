@@ -117,3 +117,25 @@ Each file includes:
 - Preventing numerical underflow with log transforms
 ---
 
+## 📊 Example: Decision Tree
+ 
+```python
+from Decision_Tree import DecisionTreeFromScratch
+import numpy as np
+ 
+# Create toy dataset
+X_train = np.array([[1.0, 1.5], [0.5, 0.8], [2.2, 1.9], 
+                     [7.0, 8.5], [9.1, 7.8], [8.2, 9.0]])
+y_train = np.array([0, 0, 0, 1, 1, 1])
+ 
+# Train
+tree = DecisionTreeFromScratch(min_samples_split=2, max_depth=5)
+tree.fit(X_train, y_train)
+ 
+# Predict
+predictions = tree.predict(np.array([[0.2, 0.4], [8.8, 8.2]]))
+print(predictions)  # [0, 1]
+```
+ 
+---
+ 
