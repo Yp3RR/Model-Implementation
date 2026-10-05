@@ -67,3 +67,10 @@ Perfect for interview prep, ML deepening, or teaching others.
 - Inline comments explaining mathematical concepts
 - A `__main__` block with working examples and expected outputs
 ---
+
+## 🚀 Quick Start
+ 
+### Prerequisites
+```bash
+pip install numpy scikit-learn xgboost pandas
+```
