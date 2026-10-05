@@ -85,3 +85,10 @@ python Decision_Tree.py
 # Test Sample 1 Prediction (Expected 0): 0
 # Test Sample 2 Prediction (Expected 1): 1
 ```
+
+Each file includes:
+1. **Model implementation** (the `__main__` block is optional)
+2. **Toy dataset** for quick testing
+3. **Expected outputs** for validation
+---
+
