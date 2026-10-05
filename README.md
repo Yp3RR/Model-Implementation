@@ -74,3 +74,14 @@ Perfect for interview prep, ML deepening, or teaching others.
 ```bash
 pip install numpy scikit-learn xgboost pandas
 ```
+
+### Run Any Model
+```bash
+# Decision Tree example
+python Decision_Tree.py
+ 
+# Output:
+# --- Model Inference Verification ---
+# Test Sample 1 Prediction (Expected 0): 0
+# Test Sample 2 Prediction (Expected 1): 1
+```
