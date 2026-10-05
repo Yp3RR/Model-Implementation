@@ -62,3 +62,8 @@ Perfect for interview prep, ML deepening, or teaching others.
 └── README.md                     # This file
 ```
 
+**Each file is self-contained** with:
+- Clear class definitions
+- Inline comments explaining mathematical concepts
+- A `__main__` block with working examples and expected outputs
+---
