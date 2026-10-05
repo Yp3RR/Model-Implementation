@@ -19,11 +19,17 @@ Perfect for interview prep, ML deepening, or teaching others.
  
 ### **Supervised Learning**
  
-| Model | Purpose | Key Concepts | Status |
-|-------|---------|--------------|--------|
-| **Linear Regression** | Continuous prediction | Gradient Descent, MSE Loss | ✅ Complete |
-| **Logistic Regression** | Binary classification | Sigmoid, Cross-Entropy Loss, Gradient Descent | ✅ Complete |
-| **Decision Tree** | Classification/Regression | Information Gain, Entropy, Recursive Splitting | ✅ Complete |
-| **K-Nearest Neighbors** | Non-parametric classification | Euclidean Distance, Majority Voting | ✅ Complete |
-| **Naive Bayes** | Probabilistic classification | Bayes' Theorem, Laplace Smoothing, Log-Sum Trick | ✅ Complete |
+| Model | Purpose | Key Concepts | Status     |
+|-------|---------|--------------|------------|
+| **Linear Regression** | Continuous prediction | Gradient Descent, MSE Loss |  Complete |
+| **Logistic Regression** | Binary classification | Sigmoid, Cross-Entropy Loss, Gradient Descent |  Complete  |
+| **Decision Tree** | Classification/Regression | Information Gain, Entropy, Recursive Splitting | Complete   |
+| **K-Nearest Neighbors** | Non-parametric classification | Euclidean Distance, Majority Voting | Complete   |
+| **Naive Bayes** | Probabilistic classification | Bayes' Theorem, Laplace Smoothing, Log-Sum Trick | Complete   |
 
+### **Ensemble Methods**
+ 
+| Model | Purpose | Key Concepts | Status     |
+|-------|---------|--------------|------------|
+| **Random Forest** | Robust classification | Bagging, Bootstrap Sampling, Feature Randomness |  Complete |
+| **XGBoost** | Gradient boosted trees | (Scikit-learn wrapper + hyperparameter tuning demo) |  Complete  |
