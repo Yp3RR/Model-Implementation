@@ -44,3 +44,21 @@ Perfect for interview prep, ML deepening, or teaching others.
  
 ---
 
+## 📁 Repository Structure
+ 
+```
+.
+├── Linear_Regression.py          # y = mx + b with gradient descent
+├── Logistic_Regression.py        # Binary classification via sigmoid
+├── Decision_Tree.py              # Entropy-based recursive splits
+├── KNN.py                        # K-nearest neighbors from scratch
+├── Naive_Bayes.py               # Probabilistic classifier + Laplace smoothing
+├── K_Means.py                    # EM-loop based clustering
+├── Random_Forest.py              # Bagging + decision trees ensemble
+├── PCA.py                        # Variance-preserving dimensionality reduction
+├── SVM.py                        # Grid search tuning demo
+├── XGBoost.py                    # Imbalanced classification + feature importance
+├── Transformers.py               # (Placeholder for future work)
+└── README.md                     # This file
+```
+
