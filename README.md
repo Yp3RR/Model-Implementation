@@ -98,3 +98,12 @@ Each file includes:
 - How weights update via partial derivatives
 - Learning rate and epoch tuning
 - Loss visualization every 100 iterations
+
+### **Information Gain & Entropy** (Decision Trees)
+- Splitting criteria: parent entropy vs child entropy
+- Best split selection: greedy feature search
+- Stopping conditions: max depth, min samples
+### **Bootstrap Aggregating** (Random Forest)
+- Sampling with replacement for diverse trees
+- Feature randomness at each split
+- Majority voting for final predictions
