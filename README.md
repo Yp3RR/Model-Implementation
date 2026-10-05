@@ -107,3 +107,13 @@ Each file includes:
 - Sampling with replacement for diverse trees
 - Feature randomness at each split
 - Majority voting for final predictions
+### **Expectation-Maximization** (K-Means)
+- Centroid initialization from data
+- Assignment phase: distance computation
+- Update phase: cluster means recalculation
+- Convergence detection
+### **Laplace Smoothing & Log-Sum Trick** (Naive Bayes)
+- Avoiding zero probabilities
+- Preventing numerical underflow with log transforms
+---
+
