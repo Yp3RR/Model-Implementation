@@ -33,3 +33,14 @@ Perfect for interview prep, ML deepening, or teaching others.
 |-------|---------|--------------|------------|
 | **Random Forest** | Robust classification | Bagging, Bootstrap Sampling, Feature Randomness |  Complete |
 | **XGBoost** | Gradient boosted trees | (Scikit-learn wrapper + hyperparameter tuning demo) |  Complete  |
+
+### **Unsupervised Learning**
+ 
+| Model | Purpose | Key Concepts | Status     |
+|-------|---------|--------------|------------|
+| **K-Means Clustering** | Partitional clustering | EM Loop, Centroid Initialization, Convergence | Complete   |
+| **PCA** | Dimensionality reduction | Variance Preservation, Standardization |  Complete  |
+| **Support Vector Machines** | Classification with margin | (Scikit-learn wrapper + grid search demo) |  Complete |
+ 
+---
+
