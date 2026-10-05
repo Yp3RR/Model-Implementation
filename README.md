@@ -92,3 +92,9 @@ Each file includes:
 3. **Expected outputs** for validation
 ---
 
+## 💡 Key Concepts Explained
+ 
+### **Gradient Descent** (Linear/Logistic Regression)
+- How weights update via partial derivatives
+- Learning rate and epoch tuning
+- Loss visualization every 100 iterations
