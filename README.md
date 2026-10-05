@@ -150,3 +150,20 @@ After studying this repo, you should understand:
 ✅ **Common pitfalls** (numerical stability, edge cases, convergence)  
  
 ---
+
+## ⚖️ License
+ 
+This repository is open for educational use. Feel free to fork, modify, and learn from it!
+ 
+---
+ 
+## 🤝 Connect
+ 
+Found this useful? Check out my other projects or connect with me:
+- **GitHub:** [Yp3RR](https://github.com/Yp3RR)
+- **LinkedIn:** [Yash Patil](https://linkedin.com/in/yash-patil-27b060312)
+- **Email:** yashpatil1492@gmail.com
+---
+ 
+**Last Updated:** October 2026  
+**Status:** Active & Maintained
