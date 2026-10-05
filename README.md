@@ -15,3 +15,15 @@ Perfect for interview prep, ML deepening, or teaching others.
  
 ---
 
+##  Implemented Models
+ 
+### **Supervised Learning**
+ 
+| Model | Purpose | Key Concepts | Status |
+|-------|---------|--------------|--------|
+| **Linear Regression** | Continuous prediction | Gradient Descent, MSE Loss | ✅ Complete |
+| **Logistic Regression** | Binary classification | Sigmoid, Cross-Entropy Loss, Gradient Descent | ✅ Complete |
+| **Decision Tree** | Classification/Regression | Information Gain, Entropy, Recursive Splitting | ✅ Complete |
+| **K-Nearest Neighbors** | Non-parametric classification | Euclidean Distance, Majority Voting | ✅ Complete |
+| **Naive Bayes** | Probabilistic classification | Bayes' Theorem, Laplace Smoothing, Log-Sum Trick | ✅ Complete |
+
