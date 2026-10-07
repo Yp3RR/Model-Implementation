@@ -143,11 +143,11 @@ print(predictions)  # [0, 1]
  
 After studying this repo, you should understand:
  
-✅ **How algorithms work at the algorithmic level**, not just API usage  
-✅ **The math behind splits, losses, and optimization**  
-✅ **Why hyperparameters (learning rate, max_depth, k) matter**  
-✅ **How to implement from scratch in Python + NumPy**  
-✅ **Common pitfalls** (numerical stability, edge cases, convergence)  
+- **How algorithms work at the algorithmic level**, not just API usage  
+- **The math behind splits, losses, and optimization**  
+- **Why hyperparameters (learning rate, max_depth, k) matter**  
+- **How to implement from scratch in Python + NumPy**  
+- **Common pitfalls** (numerical stability, edge cases, convergence)  
  
 ---
 
