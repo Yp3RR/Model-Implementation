@@ -92,7 +92,7 @@ Each file includes:
 3. **Expected outputs** for validation
 ---
 
-## 💡 Key Concepts Explained
+##  Key Concepts Explained
  
 ### **Gradient Descent** (Linear/Logistic Regression)
 - How weights update via partial derivatives
@@ -117,7 +117,7 @@ Each file includes:
 - Preventing numerical underflow with log transforms
 ---
 
-## 📊 Example: Decision Tree
+##  Example: Decision Tree
  
 ```python
 from Decision_Tree import DecisionTreeFromScratch
@@ -139,7 +139,7 @@ print(predictions)  # [0, 1]
  
 ---
 
-## 🧠 Learning Outcomes
+##  Learning Outcomes
  
 After studying this repo, you should understand:
  
