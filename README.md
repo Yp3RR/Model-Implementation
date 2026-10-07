@@ -44,7 +44,7 @@ Perfect for interview prep, ML deepening, or teaching others.
  
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
  
 ```
 .
@@ -68,7 +68,7 @@ Perfect for interview prep, ML deepening, or teaching others.
 - A `__main__` block with working examples and expected outputs
 ---
 
-## 🚀 Quick Start
+##  Quick Start
  
 ### Prerequisites
 ```bash
