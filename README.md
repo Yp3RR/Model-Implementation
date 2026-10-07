@@ -151,13 +151,13 @@ After studying this repo, you should understand:
  
 ---
 
-## ⚖️ License
+##  License
  
 This repository is open for educational use. Feel free to fork, modify, and learn from it!
  
 ---
  
-## 🤝 Connect
+##  Connect
  
 Found this useful? Check out my other projects or connect with me:
 - **GitHub:** [Yp3RR](https://github.com/Yp3RR)
